@@ -8,5 +8,21 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
+        <StackPanel>
+
+            <Button Name="btnListarDataTable" Content="Listar (DataTable)" Width="150" Margin="5" Click="btnListarDataTable_Click"/>
+            <DataGrid x:Name="dgClientesDataTable" AutoGenerateColumns="True" Height="100"/>
+
+            <Button Name="btnListarDataReader" Content="Listar (DataReader)" Width="150" Margin="5" Click="btnListarDataReader_Click"/>
+            <DataGrid x:Name="dgClientesDataReader" AutoGenerateColumns="True" Height="100"/>
+
+            <WrapPanel>
+                <TextBox Name="txtBuscar" Width="200" Margin="5" Text="Buscar por nombre"/>
+                <Button Name="btnBuscar" Content="Buscar por Nombre" Width="150" Margin="5" Click="btnBuscar_Click"/>
+            </WrapPanel>
+            <DataGrid x:Name="dgBuscar" AutoGenerateColumns="True" Height="100"/>
+
+        </StackPanel>
+
     </Grid>
 </Window>
